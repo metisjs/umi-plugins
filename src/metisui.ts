@@ -108,4 +108,5 @@ export const MetisUIConfigContext = React.createContext<[ConfigProviderProps, Re
   });
 
   api.addRuntimePlugin(() => [withTmpPath({ api, path: "runtime.tsx" })]);
+  api.addRuntimePluginKey(() => ["metisui"]);
 };
