@@ -1,12 +1,13 @@
 {
   "name": "@metisjs/umi-plugins",
   "author": "王建明 <wangjianming.x@gmail.com>",
-  "version": "0.0.1-alpha.8",
+  "version": "0.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "dev": "father dev",
-    "build": "father build"
+    "build": "father build",
+    "release": "node ./scripts/release"
   },
   "keywords": [
     "umi",
@@ -20,9 +21,13 @@
   ],
   "devDependencies": {
     "@types/node": "^18.15.11",
+    "@umijs/utils": "^4.4.10",
     "father": "^4.1.8",
+    "git-repo-info": "^2.1.1",
+    "rimraf": "^6.0.1",
     "typescript": "^5.0.3",
-    "umi": "^4.4.9"
+    "umi": "^4.4.9",
+    "zx": "^8.5.3"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.4",
