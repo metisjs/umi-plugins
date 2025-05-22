@@ -27,33 +27,6 @@ export default (api: IApi) => {
 
   api.registerPlugins([require.resolve("./tailwindcss")]);
 
-  // babel-plugin-import
-  api.addExtraBabelPlugins(() => {
-    if (!api.appData.vite) {
-      return [
-        [
-          require.resolve("babel-plugin-import"),
-          {
-            libraryName: "metis-ui",
-            libraryDirectory: "es",
-          },
-          "import-metis-ui",
-        ],
-        [
-          require.resolve("babel-plugin-import"),
-          {
-            libraryName: "@metisjs/icons",
-            libraryDirectory: "es/icons",
-            camel2DashComponentName: false,
-          },
-          "import-metis-icons",
-        ],
-      ];
-    }
-
-    return [];
-  });
-
   const lodashPkg = dirname(require.resolve("lodash/package.json"));
   const lodashPath = {
     merge: winPath(join(lodashPkg, "merge")),
